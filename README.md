@@ -141,3 +141,24 @@
   ``SELECT country_id, COUNT(*) FROM city GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;``
 
   44 - 60
+  
+  
+  ## SQL Ödev 9
+
+- **city** tablosu ile **country** tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+  ``SELECT * FROM CITY JOIN COUNTRY ON COUNTRY.COUNTRY_ID=CITY.COUNTRY_ID;``
+
+- **customer** tablosu ile **payment** tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+  ``SELECT PAYMENT.PAYMENT_ID, CUSTOMER.FIRST_NAME, CUSTOMER.LAST_NAME FROM PAYMENT JOIN CUSTOMER ON CUSTOMER.CUSTOMER_ID=PAYMENT.CUSTOMER_ID;``
+
+- **customer** tablosu ile **rental** tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+  ``SELECT RENTAL.RENTAL_ID, CUSTOMER.FIRST_NAME, CUSTOMER.LAST_NAME FROM RENTAL JOIN CUSTOMER ON CUSTOMER.CUSTOMER_ID=RENTAL.CUSTOMER_ID;``
+
+  
+
+  
+
+
