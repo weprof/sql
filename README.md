@@ -157,8 +157,16 @@
 
   ``SELECT RENTAL.RENTAL_ID, CUSTOMER.FIRST_NAME, CUSTOMER.LAST_NAME FROM RENTAL JOIN CUSTOMER ON CUSTOMER.CUSTOMER_ID=RENTAL.CUSTOMER_ID;``
 
-  
+  ## SQL Ödev 10
 
-  
+- **city** tablosu ile **country** tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
 
+  ``SELECT city, country FROM city LEFT JOIN country ON city.country_id = country.country_id; ``
 
+- **customer** tablosu ile **payment** tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+
+  ``SELECT PAYMENT_ID, FIRST_NAME, LAST_NAME FROM CUSTOMER RIGHT JOIN PAYMENT ON PAYMENT.CUSTOMER_ID=CUSTOMER.CUSTOMER_ID;``
+
+- **customer** tablosu ile **rental** tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+
+  ``SELECT RENTAL_ID, FIRST_NAME, LAST_NAME FROM CUSTOMER FULL JOIN RENTAL ON RENTAL.CUSTOMER_ID=CUSTOMER.CUSTOMER_ID;``
