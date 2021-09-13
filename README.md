@@ -212,5 +212,5 @@
 
 - **payment** tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
 
-  ``SELECT customer_id,first_name,last_name,(SELECT COUNT(*) FROM payment p WHERE p.customer_id = c.customer_id) as payment FROM customer C;``
+  ``SELECT customer_id,first_name,last_name,(SELECT COUNT(*) FROM payment p WHERE p.customer_id = c.customer_id) as payment FROM customer C  ORDER BY payment DESC;``
 
