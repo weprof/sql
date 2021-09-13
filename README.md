@@ -194,3 +194,23 @@
 - İlk 3 sorguyu tekrar eden veriler için de yapalım.
 
 
+
+
+## SQL Ödev 12
+
+- **film** tablosunda film uzunluğu **length** sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+
+  ``SELECT COUNT(*) FROM FILM WHERE LENGTH >(SELECT AVG(LENGTH) FROM FILM);``
+
+- **film** tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+
+  ``SELECT COUNT(*) FROM FILM WHERE RENTAL_RATE = (SELECT MAX(RENTAL_RATE) FROM FILM);``
+
+- **film** tablosunda en düşük rental_rate ve en düşün replacement_cost değerlerine sahip filmleri sıralayınız.
+
+  ``SELECT * FROM FILM WHERE RENTAL_RATE = (SELECT MIN(RENTAL_RATE) FROM FILM) AND REPLACEMENT_COST = (SELECT MIN(REPLACEMENT_COST) FROM FILM);``
+
+- **payment** tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+  ``SELECT customer_id,first_name,last_name,(SELECT COUNT(*) FROM payment p WHERE p.customer_id = c.customer_id) as payment FROM customer C;``
+
